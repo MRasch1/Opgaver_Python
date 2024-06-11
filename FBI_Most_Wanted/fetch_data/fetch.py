@@ -10,7 +10,7 @@ def fetch_fbi_data():
         try:
             response = requests.get(url)
             response.raise_for_status()
-            data = response.json()
+            data = response.content.json()
             return data['items']
         except requests.exceptions.HTTPError as http_err:
             if response.status_code == 429:

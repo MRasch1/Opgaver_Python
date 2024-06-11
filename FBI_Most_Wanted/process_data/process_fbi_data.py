@@ -1,4 +1,4 @@
-import fetch_data
+import Fetch_data.fetch
 
 def process_fbi_data(items):
     missing_persons = []
@@ -12,8 +12,8 @@ def process_fbi_data(items):
         last_name = names[1] if len(names) > 1 else 'Unknown'
         
         if "missing person" in categories:
-            missing_persons.append(fetch_data.MissingPerson(id, first_name, last_name))
+            missing_persons.append(Fetch_data.MissingPerson(id, first_name, last_name))
         elif "Criminal Enterprise Investigations" in categories:
-            gang_members.append(fetch_data.GangMember(id, first_name, last_name))
+            gang_members.append(Fetch_data.GangMember(id, first_name, last_name))
     
     return missing_persons, gang_members
