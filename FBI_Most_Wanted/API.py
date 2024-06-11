@@ -1,14 +1,13 @@
 import sys
 sys.path.insert(0, '/Opgaver_Dag1')
 
-import Fetch_data.fetch
-import Process_data.process_fbi_data
-
+from Fetch_data.fetch import fetch_fbi_data
+from Process_data.process_fbi_data import process_fbi_data
 
 def main():
-    items = Fetch_data.fetch.fetch_fbi_data()
+    items = fetch_fbi_data()
     if items:
-        missing_persons, gang_members = Process_data.process_fbi_data.process_fbi_data(items)
+        missing_persons, gang_members = process_fbi_data(items)
         
         print("Missing Persons:")
         for person in missing_persons:
