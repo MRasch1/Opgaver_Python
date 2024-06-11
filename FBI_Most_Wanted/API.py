@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, '/Opgaver_Dag1')
+
 import Fetch_data.fetch
 import Process_data.process_fbi_data
 
