@@ -5,7 +5,7 @@ def fetch_fbi_data():
     url = "https://api.fbi.gov/wanted/v1/list"
     max_retries = 5
     retries = 0
-    
+
     while retries < max_retries:
         try:
             response = requests.get(url)
@@ -24,5 +24,5 @@ def fetch_fbi_data():
         except Exception as err:
             print(f"Other error occurred: {err}")
             break
-    
+
     return []
