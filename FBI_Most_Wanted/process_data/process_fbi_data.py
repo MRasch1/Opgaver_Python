@@ -1,4 +1,4 @@
-from Fetch_data.models import MissingPerson, GangMember
+from Fetch_data.PersonClass import MissingPerson, GangMember
 
 def process_fbi_data(items):
     missing_persons = []
@@ -15,5 +15,5 @@ def process_fbi_data(items):
             missing_persons.append(MissingPerson(id, first_name, last_name))
         elif "Criminal Enterprise Investigations" in categories:
             gang_members.append(GangMember(id, first_name, last_name))
-            
+
     return missing_persons, gang_members

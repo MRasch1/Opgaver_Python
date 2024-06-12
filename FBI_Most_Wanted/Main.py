@@ -1,5 +1,3 @@
-import os
-import sys
 from Fetch_data.fetch import fetch_fbi_data
 from Process_data.process_fbi_data import process_fbi_data
 
