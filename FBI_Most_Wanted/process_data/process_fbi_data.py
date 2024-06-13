@@ -1,4 +1,4 @@
-from Fetch_data.PersonClass import MissingPerson, GangMember
+from fetch_data.PersonClass import MissingPerson, GangMember
 
 def process_fbi_data(items):
     missing_persons = []
